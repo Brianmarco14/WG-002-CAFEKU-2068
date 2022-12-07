@@ -70,11 +70,13 @@ class DasboardController extends Controller
      */
 }
 
+//INTERFACE UNTUK MENGHITUNG DISKON
 interface hitung
 {
     public function diskon();
 }
 
+//PERHITUNGAN DISKON IMPLEMENTS DARI INTERFACES
 class perhitunganDiskon implements hitung
 {
     public function __construct($status, $total)
@@ -94,6 +96,8 @@ class perhitunganDiskon implements hitung
     }
 }
 
+
+//PERHITUNGAN TOTAL PEMBAYARAN
 class perhitunganPembayaran extends perhitunganDiskon
 {
     public function hitungTotalPembayaran()
